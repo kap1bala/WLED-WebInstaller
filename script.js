@@ -34,18 +34,41 @@ function t(key) {
 // apply translations to all elements with data-i18n attribute
 function applyTranslations() {
     document.querySelectorAll('[data-i18n]').forEach((element) => {
-        var key = element.dataset.i18n;
-        var val = t(key);
-        if (val) element.innerHTML = val;
+        const key = element.dataset.i18n;
+        let val = t(key);
+
+        if (val) {
+            // Determine whether to use innerHTML or textContent based on content.
+            // Using textContent for plain text is safer as it prevents potential XSS vulnerabilities.
+            // A simple check for common HTML characters (<, >, &) can indicate HTML content.
+            const containsHtml = /[<>&]/.test(val);
+
+            if (containsHtml) {
+                element.innerHTML = val;
+            } else {
+                element.textContent = val;
+            }
+
+            // Special handling for the 'li1_text' element to dynamically update the version string.
+            // This ensures the version number is correctly inserted after the translation is applied.
+            if (key === 'li1_text') {
+                const sel = document.getElementById('ver');
+                // Use querySelector on the current element to find the #verstr span within its new content.
+                const verstrElement = element.querySelector('#verstr');
+                if (sel && verstrElement) {
+                    verstrElement.textContent = sel.options[sel.selectedIndex].text;
+                }
+            }
+        }
     });
-    // set install button label
-    var btn = document.querySelector('#inst button[slot="activate"]');
-    if (btn) btn.textContent = t('install_button_text') || btn.textContent;
-    // ensure version string stays in sync with select
-    var sel = document.getElementById('ver');
-    if (sel && document.getElementById('verstr')) {
-        document.getElementById('verstr').textContent = sel.options[sel.selectedIndex].text;
+
+    // Set the install button label. This part remains largely the same as it correctly uses textContent.
+    const btn = document.querySelector('#inst button[slot="activate"]');
+    if (btn) {
+        btn.textContent = t('install_button_text') || btn.textContent;
     }
+    // The previous general update for 'verstr' at the end of the function is now handled
+    // specifically within the loop for 'li1_text' and is therefore removed to avoid redundancy.
 }
 
 function switchLang(lang) {

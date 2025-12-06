@@ -1,7 +1,7 @@
 // i18n translations and helper functions
 const i18n = {
     "en": {
-        "overlay_html": `<font size="7"><b>Web Installer under maintenance</b></font><br> The WLED web installer is currently out of service due to maintenance work and will be back online shortly.<br><br> In the meantime, you can use the webinstaller provided by Wladi: <a href="https://wled-install.github.io/">https://wled-install.github.io/</a>`,
+        "overlay_html": `<h1>Web Installer under maintenance</h1><br> The WLED web installer is currently out of service due to maintenance work and will be back online shortly.<br><br> In the meantime, you can use the webinstaller provided by Wladi: <a href="https://wled-install.github.io/">https://wled-install.github.io/</a>`,
         "welcome_text": `Welcome to the WLED web installer!`,
         "li1_text": `Plug in your ESP to a USB port. We will install WLED <span id="verstr"></span> to it.`,
         "li2_text": `Hit "Install" and select the correct COM port. <a onclick="showSerialHelp()">No device found?</a>`,
@@ -11,7 +11,7 @@ const i18n = {
         "serial_help_html": `Hit "Install" and select the correct COM port.<br><br>\n    You might be missing the drivers for your board.<br>\n    Here are drivers for chips commonly used in ESP boards:<br>\n    <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers" target="_blank">CP2102 (square chip)</a><br>\n    <a href="https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers" target="_blank">CH34x (rectangular chip)</a><br><br>\n    Make sure your USB cable supports data transfer.<br><br>\n    `,
     },
     "zh-CN": {
-        "overlay_html": `<font size="7"><b>Web 安装程序正在维护</b></font><br> WLED Web 安装程序目前正在维护，稍后将重新上线。<br><br> 同时，您可以使用 Wladi 提供的 webinstaller：<a href="https://wled-install.github.io/">https://wled-install.github.io/</a>`,
+        "overlay_html": `<h1>Web 安装程序正在维护</h1><br> WLED Web 安装程序目前正在维护，稍后将重新上线。<br><br> 同时，您可以使用 Wladi 提供的 webinstaller：<a href="https://wled-install.github.io/">https://wled-install.github.io/</a>`,
         "welcome_text": `欢迎使用 WLED Web 安装程序！`,
         "li1_text": `将 ESP 插入到 USB 端口。我们将向其安装 WLED <span id="verstr"></span>。`,
         "li2_text": `点击“安装”并选择正确的 COM 端口。<a onclick="showSerialHelp()">未找到设备？</a>`,

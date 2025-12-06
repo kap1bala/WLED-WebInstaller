@@ -59,7 +59,7 @@ function switchLang(lang) {
 function initI18n() {
     var saved = localStorage.getItem('wled_lang');
     // set current language to saved language or default to English
-    saved && i18n[saved] ? currentLang = saved : currentLang = 'en';
+    currentLang = (saved && i18n[saved]) ? saved : 'en';
     var select = document.getElementById('langSelect');
     if (select) select.value = currentLang;
     applyTranslations();
@@ -90,8 +90,6 @@ function setManifest() {
 
     document.getElementById('inst').setAttribute('manifest', m);
     document.getElementById('verstr').textContent = opt.text;
-    // re-apply translations to keep translated strings but keep version text
-    applyTranslations();
 }
 
 

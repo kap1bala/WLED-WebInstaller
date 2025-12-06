@@ -18,7 +18,7 @@ const i18n = {
         "li3_text": `在 3 分钟内完成 WLED 的安装并连接！`,
         "install_button_text": `安装`,
         "unsupported_html": `抱歉，您的浏览器尚不受支持！<br>\n    请在桌面端的 Chrome 或 Edge 上尝试。<br>\n    可在此处查找二进制文件：<br>\n    <a href="https://github.com/Aircoookie/WLED/releases" target="_blank">\n    <button class="btn" slot="activate">GitHub Releases</button>\n    </a>`,
-        "serial_help_html": `点击“Install”并选择正确的 COM 端口。<br><br>\n    您可能缺少开发板的驱动程序。<br>\n    以下是常见于 ESP 开发板的芯片驱动程序：<br>\n    <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers" target="_blank">CP2102 (正方形芯片)</a><br>\n    <a href="https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers" target="_blank">CH34x (长方形芯片)</a><br><br>\n    请确保你的 USB 线支持数据传输。<br><br>\n    `,
+        "serial_help_html": `点击“安装”并选择正确的 COM 端口。<br><br>\n    您可能缺少开发板的驱动程序。<br>\n    以下是常见于 ESP 开发板的芯片驱动程序：<br>\n    <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers" target="_blank">CP2102 (正方形芯片)</a><br>\n    <a href="https://github.com/nodemcu/nodemcu-devkit/tree/master/Drivers" target="_blank">CH34x (长方形芯片)</a><br><br>\n    请确保你的 USB 线支持数据传输。<br><br>\n    `,
     }
 };
 

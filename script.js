@@ -41,7 +41,7 @@ function applyTranslations() {
             // Determine whether to use innerHTML or textContent based on content.
             // Using textContent for plain text is safer as it prevents potential XSS vulnerabilities.
             // A simple check for common HTML characters (<, >, &) can indicate HTML content.
-            const containsHtml = /[<>&]/.test(val);
+            const containsHtml = /<[a-z][\s\S]*>/i.test(val);
 
             if (containsHtml) {
                 element.innerHTML = val;

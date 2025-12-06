@@ -22,7 +22,7 @@ const i18n = {
     }
 };
 
-var currentLang = 'en';
+let currentLang = 'en';
 
 // translation function
 function t(key) {
@@ -80,10 +80,10 @@ function switchLang(lang) {
 }
 
 function initI18n() {
-    var saved = localStorage.getItem('wled_lang');
+    let saved = localStorage.getItem('wled_lang');
     // set current language to saved language or default to English
     currentLang = (saved && i18n[saved]) ? saved : 'en';
-    var select = document.getElementById('langSelect');
+    const select = document.getElementById('langSelect');
     if (select) select.value = currentLang;
     applyTranslations();
 }

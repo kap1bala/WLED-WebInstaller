@@ -3,7 +3,7 @@ const i18n = {
     "en": {
         "overlay_html": `<font size="7"><b>Web Installer under maintenance</b></font><br> The WLED web installer is currently out of service due to maintenance work and will be back online shortly.<br><br> In the meantime, you can use the webinstaller provided by Wladi: <a href="https://wled-install.github.io/">https://wled-install.github.io/</a>`,
         "welcome_text": `Welcome to the WLED web installer!`,
-        "li1_text": `Plug in your ESP to a USB port. We will install WLED <span id="verstr">0.12.0</span> to it.`,
+        "li1_text": `Plug in your ESP to a USB port. We will install WLED <span id="verstr"></span> to it.`,
         "li2_text": `Hit "Install" and select the correct COM port. <a onclick="showSerialHelp()">No device found?</a>`,
         "li3_text": `Get WLED installed and connected in less than 3 minutes!`,
         "install_button_text": `Install`,
@@ -13,7 +13,7 @@ const i18n = {
     "zh-CN": {
         "overlay_html": `<font size="7"><b>Web 安装程序正在维护</b></font><br> WLED Web 安装程序目前正在维护，稍后将重新上线。<br><br> 同时，您可以使用 Wladi 提供的 webinstaller：<a href="https://wled-install.github.io/">https://wled-install.github.io/</a>`,
         "welcome_text": `欢迎使用 WLED Web 安装程序！`,
-        "li1_text": `将 ESP 插入到 USB 端口。我们将向其安装 WLED <span id="verstr">0.12.0</span>。`,
+        "li1_text": `将 ESP 插入到 USB 端口。我们将向其安装 WLED <span id="verstr"></span>。`,
         "li2_text": `点击“安装”并选择正确的 COM 端口。<a onclick="showSerialHelp()">未找到设备？</a>`,
         "li3_text": `在 3 分钟内完成 WLED 的安装并连接！`,
         "install_button_text": `安装`,
